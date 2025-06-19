@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# Define variables
 image="image-name:tag"
+
+# Define variables
 output_file="${image##*/}"            # Remove registry prefix
 output_file="${output_file/:/-}"      # Replace colon with dash
 report_dir="$(pwd)/reports"
