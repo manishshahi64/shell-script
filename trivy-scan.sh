@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define variables
-image="icedq.azurecr.io/nfs-provisioner:v6.5"
+image="image-name:tag"
 output_file="${image##*/}"            # Remove registry prefix
 output_file="${output_file/:/-}"      # Replace colon with dash
 report_dir="$(pwd)/reports"
@@ -9,7 +9,6 @@ template_file="$(pwd)/html.tpl"
 final_destination="$(pwd)/reports/my_report"
 # Create directories if they don't exist
 mkdir -p "$report_dir" "$(dirname "$final_destination")"
-
 
 # Create directories if they don't exist
 mkdir -p "$report_dir" "$(dirname "$final_destination")"
